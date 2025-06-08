@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CardextensionComponent } from "./components/cardextension/cardextension.component";
+import { ButtoncompComponent } from "./components/buttoncomp/buttoncomp.component";
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CardextensionComponent],
+  imports: [RouterOutlet, CardextensionComponent, ButtoncompComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })
