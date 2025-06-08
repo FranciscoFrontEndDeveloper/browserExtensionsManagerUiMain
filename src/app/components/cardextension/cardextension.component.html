@@ -1,16 +1,14 @@
-<div class="cardExtCont">
+<div class="cardExtCont" *ngFor="let ext of extensions()">
   <div>
     <div>
-      <picture
-        ><img src="assets/images/logo-devlens.svg" alt="devlens"
-      /></picture>
+      <picture><img src="{{ ext.img }}" alt="devlens" /></picture>
     </div>
-    <div>
-      <h3>DevLens</h3>
-      <p>Quickly inspect page layouts and visualize element boundaries.</p>
+    <div class="cardExtCont__text">
+      <h3>{{ ext.title }}</h3>
+      <p>{{ ext.text }}</p>
     </div>
   </div>
-  <div>
+  <div class="cardExtbuttons">
     <app-buttoncomp [buttonReUse]="Remove"></app-buttoncomp>
     <app-buttontoggle></app-buttontoggle>
   </div>
