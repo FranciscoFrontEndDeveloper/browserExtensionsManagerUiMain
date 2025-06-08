@@ -9,5 +9,5 @@ import { ButtontoggleComponent } from "../buttontoggle/buttontoggle.component";
   styleUrl: './cardextension.component.sass'
 })
 export class CardextensionComponent {
-
+Remove: string = 'Remove'
 }

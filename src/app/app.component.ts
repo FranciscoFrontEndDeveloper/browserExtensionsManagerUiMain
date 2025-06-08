@@ -12,4 +12,7 @@ import { ButtoncompComponent } from "./components/buttoncomp/buttoncomp.componen
 })
 export class AppComponent {
   title = 'browserExtensionsManagerUiMain';
+  All: string = 'All';
+  Active: string = 'Active';
+  Inactive: string = 'Inactive';
 }
