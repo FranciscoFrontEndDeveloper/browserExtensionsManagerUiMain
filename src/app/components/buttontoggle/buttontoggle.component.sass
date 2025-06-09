@@ -1,0 +1,33 @@
+.toggleSwitch
+ position: relative
+ display: inline-block
+ width: 40px
+ height: 20px
+ &__input
+  opacity: 0
+  width: 0
+  height: 0
+  &:checked + .toggleSwitch__slider
+   background-color: hsl(3, 86%, 64%)
+   &::before
+    transform: translateX(18px)
+ &__slider
+  position: absolute
+  cursor: pointer
+  background-color: #cccc
+  border-radius: 34px
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  transition: background-color 0.3s
+  &::before
+   content: ""
+   position: absolute
+   height: 16px
+   width: 16px
+   left: 2px
+   bottom: 2px
+   background-color: white
+   border-radius: 50%
+   transition: transform 0.3s
