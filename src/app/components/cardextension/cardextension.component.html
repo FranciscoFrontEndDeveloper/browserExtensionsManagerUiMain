@@ -1,15 +1,17 @@
-<div class="cardExtCont" *ngFor="let ext of extensions()">
-  <div>
+<div class="allCardCont">
+  <div class="cardExtCont" *ngFor="let ext of extensions()">
     <div>
-      <picture><img src="{{ ext.img }}" alt="devlens" /></picture>
+      <div>
+        <picture><img src="{{ ext.img }}" alt="devlens" /></picture>
+      </div>
+      <div class="cardExtCont__text">
+        <h3>{{ ext.title }}</h3>
+        <p>{{ ext.text }}</p>
+      </div>
     </div>
-    <div class="cardExtCont__text">
-      <h3>{{ ext.title }}</h3>
-      <p>{{ ext.text }}</p>
+    <div class="cardExtbuttons">
+      <app-buttoncomp [buttonReUse]="Remove"></app-buttoncomp>
+      <app-buttontoggle></app-buttontoggle>
     </div>
-  </div>
-  <div class="cardExtbuttons">
-    <app-buttoncomp [buttonReUse]="Remove"></app-buttoncomp>
-    <app-buttontoggle></app-buttontoggle>
   </div>
 </div>
