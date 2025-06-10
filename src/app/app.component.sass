@@ -14,22 +14,34 @@
   background: hsl(226, 25%, 17%)
   padding: 1rem
   align-items: center
-  margin: 1rem
   border-radius: 10px
 
 .buttonsCont
   display: flex
   flex-direction: column
   padding: 1rem 0
+  justify-content: center
+  width: 100%
+  &__buttonActs
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+    gap: 0 2rem
 div:nth-child(1)
   h1
     text-align: center
     color: #fff
-div:nth-child(2)
-  display: flex
-  justify-content: space-evenly
 .buttonExten
   input
     background: hsl(225, 23%, 24%)
     padding: 0.5rem
     border-radius: 7px
+@media screen and ( min-width:  1280px)
+  .buttonsCont
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    &__buttonActs
+      width: 25%
+      justify-content: space-between
