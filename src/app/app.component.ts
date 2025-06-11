@@ -15,4 +15,7 @@ export class AppComponent {
   All: string = 'All';
   Active: string = 'Active';
   Inactive: string = 'Inactive';
+  darkmode() {
+    console.log('dark mode')
+  }
 }
