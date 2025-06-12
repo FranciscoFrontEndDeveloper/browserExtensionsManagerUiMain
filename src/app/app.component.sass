@@ -14,6 +14,21 @@
   background: $background
   background-repeat: no-repeat
 
+@mixin  extenHead($background)
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  background: $background
+  padding: 1rem
+  align-items: center
+  border-radius: 10px
+
+@mixin  titleExten($color)
+  color: $color
+@mixin bottomMode($background)
+  background: $background
+  padding: 0.5rem
+  border-radius: 7px
 .superMainDark
   @include darkMode(linear-gradient(180deg, #040918 0%, #091540 100%))
 
@@ -31,15 +46,11 @@
   grid-template-columns: auto
   grid-template-rows: repeat(3,auto)
 
-.extenheadCont
-  display: flex
-  flex-direction: row
-  justify-content: space-between
-  background: hsl(226, 25%, 17%)
-  padding: 1rem
-  align-items: center
-  border-radius: 10px
+.extenheadContDark
+  @include extenHead(hsl(226, 25%, 17%))
 
+.extenheadContLight
+  @include extenHead(hsl(200, 60%, 99%))
 .buttonsCont
   display: flex
   flex-direction: column
@@ -52,15 +63,20 @@
     flex-direction: row
     justify-content: center
     gap: 0 2rem
-div:nth-child(1)
-  h1
-    text-align: center
-    color: #fff
-.buttonExten
+.titleDark
+  @include titleExten(hsl(200, 60%, 99%))
+  text-align: center
+.titleLight
+  @include titleExten(hsl(227, 75%, 14%))
+  text-align: center
+
+.buttonExtenDark
   input
-    background: hsl(225, 23%, 24%)
-    padding: 0.5rem
-    border-radius: 7px
+    @include bottomMode(hsl(225, 23%, 24%))
+
+.buttonExtenLigth
+  input
+    @include bottomMode(hsl(0, 0%, 93%))
 @media screen and ( min-width:  1280px)
   .buttonsCont
     flex-direction: row

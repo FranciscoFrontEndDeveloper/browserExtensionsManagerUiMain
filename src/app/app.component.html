@@ -1,26 +1,35 @@
-<div [ngClass]="isDarkMode ? 'superMainDark' : 'superMainlight'" >
-  <div class="mainContainer" >
-  <section>
-    <div class="extenheadCont">
-      <div class="iconExten">
-        <picture
-          ><img src="assets/images/logoWhite.svg" alt="logo extensions"
-        /></picture>
+<div [ngClass]="isDarkMode ? 'superMainDark' : 'superMainlight'">
+  <div class="mainContainer">
+    <section>
+      <div [ngClass]="isDarkMode ? 'extenheadContDark' : 'extenheadContLight'">
+        <div class="iconExten">
+          <picture><img [src]="logoPath" alt="logo extensions" /></picture>
+        </div>
+        <div [ngClass]="isDarkMode ? 'buttonExtenDark':'buttonExtenLigth'">
+          <input
+            (click)="darkmode()"
+            type="image"
+            [src]="iconMode"
+            alt="boton modo"
+          />
+        </div>
       </div>
-      <div class="buttonExten">
-        <input (click)="darkmode()" type="image" src="assets/images/icon-sun.svg" alt="boton sol" />
+    </section>
+    <section class="buttonsCont">
+      <div>
+        <h1 [ngClass]="isDarkMode ? 'titleDark' : 'titleLight'">
+          Extensions List
+        </h1>
       </div>
-    </div>
-  </section>
-  <section class="buttonsCont">
-    <div><h1>Extensions List</h1></div>
-    <div class="buttonsCont__buttonActs">
-      <app-buttoncomp [buttonReUse]="All"></app-buttoncomp>
-      <app-buttoncomp [buttonReUse]="Active"></app-buttoncomp>
-      <app-buttoncomp [buttonReUse]="Inactive"></app-buttoncomp>
-    </div>
-  </section>
-  <section class="cardextensionCont"><app-cardextension></app-cardextension></section>
-</div>
+      <div class="buttonsCont__buttonActs">
+        <app-buttoncomp [buttonReUse]="All"></app-buttoncomp>
+        <app-buttoncomp [buttonReUse]="Active"></app-buttoncomp>
+        <app-buttoncomp [buttonReUse]="Inactive"></app-buttoncomp>
+      </div>
+    </section>
+    <section class="cardextensionCont">
+      <app-cardextension></app-cardextension>
+    </section>
+  </div>
 </div>
 <router-outlet />
