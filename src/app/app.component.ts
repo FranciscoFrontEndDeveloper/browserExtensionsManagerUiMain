@@ -28,11 +28,9 @@ export class AppComponent {
   darkmode() {
     this.isDarkMode = !this.isDarkMode;
     if (this.isDarkMode) {
-      console.log(this.darkLogoPath);
       this.logoPath = this.darkLogoPath;
       this.iconMode = 'assets/images/icon-sun.svg';
     } else {
-      console.log(this.lightLogoPath);
       this.logoPath = this.lightLogoPath;
       this.iconMode = 'assets/images/icon-moon.svg';
     }

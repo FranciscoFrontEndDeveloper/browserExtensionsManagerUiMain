@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ButtoncompComponent } from '../buttoncomp/buttoncomp.component';
 import { ButtontoggleComponent } from '../buttontoggle/buttontoggle.component';
 import { ExtensionsService } from '../../services/extensions.service';
@@ -15,4 +15,5 @@ export class CardextensionComponent {
   Remove: string = 'Remove';
   private extensionsService = inject(ExtensionsService);
   extensions = this.extensionsService.extensions;
+  @Input('mainMode') mainMode:boolean = true
 }

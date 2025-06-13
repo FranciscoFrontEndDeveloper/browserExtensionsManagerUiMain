@@ -5,7 +5,7 @@
         <div class="iconExten">
           <picture><img [src]="logoPath" alt="logo extensions" /></picture>
         </div>
-        <div [ngClass]="isDarkMode ? 'buttonExtenDark':'buttonExtenLigth'">
+        <div [ngClass]="isDarkMode ? 'buttonExtenDark' : 'buttonExtenLigth'">
           <input
             (click)="darkmode()"
             type="image"
@@ -22,13 +22,22 @@
         </h1>
       </div>
       <div class="buttonsCont__buttonActs">
-        <app-buttoncomp [darkModeButton]="isDarkMode" [buttonReUse]="All"></app-buttoncomp>
-        <app-buttoncomp [darkModeButton]="isDarkMode" [buttonReUse]="Active"></app-buttoncomp>
-        <app-buttoncomp [darkModeButton]="isDarkMode" [buttonReUse]="Inactive"></app-buttoncomp>
+        <app-buttoncomp
+          [darkModeButton]="isDarkMode"
+          [buttonReUse]="All"
+        ></app-buttoncomp>
+        <app-buttoncomp
+          [darkModeButton]="isDarkMode"
+          [buttonReUse]="Active"
+        ></app-buttoncomp>
+        <app-buttoncomp
+          [darkModeButton]="isDarkMode"
+          [buttonReUse]="Inactive"
+        ></app-buttoncomp>
       </div>
     </section>
     <section class="cardextensionCont">
-      <app-cardextension></app-cardextension>
+      <app-cardextension [mainMode]="isDarkMode"></app-cardextension>
     </section>
   </div>
 </div>
