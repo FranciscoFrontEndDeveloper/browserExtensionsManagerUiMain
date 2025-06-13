@@ -22,9 +22,9 @@
         </h1>
       </div>
       <div class="buttonsCont__buttonActs">
-        <app-buttoncomp [buttonReUse]="All"></app-buttoncomp>
-        <app-buttoncomp [buttonReUse]="Active"></app-buttoncomp>
-        <app-buttoncomp [buttonReUse]="Inactive"></app-buttoncomp>
+        <app-buttoncomp [darkModeButton]="isDarkMode" [buttonReUse]="All"></app-buttoncomp>
+        <app-buttoncomp [darkModeButton]="isDarkMode" [buttonReUse]="Active"></app-buttoncomp>
+        <app-buttoncomp [darkModeButton]="isDarkMode" [buttonReUse]="Inactive"></app-buttoncomp>
       </div>
     </section>
     <section class="cardextensionCont">

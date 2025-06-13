@@ -1,15 +1,24 @@
-button
+@mixin  buttonMain($background, $color)
  border-radius: 50px
  padding: 10px 20px
  border: 1px solid hsl(226, 11%, 37%)
- background: hsl(226, 25%, 17%)
- color: hsl(200, 60%, 99%)
+ background: $background
+ color: $color
  transition: all 0.8 ease
  font-weight: normal
  font-size: 1rem
+
+.buttonMainDark
+ @include buttonMain(hsl(226, 25%, 17%),hsl(200, 60%, 99%))
  &:hover
   background: hsl(3, 86%, 64%)
   color: hsl(227, 75%, 14%)
   border: 1px solid hsl(3, 86%, 64%)
  &:focus
   outline: 2px solid hsl(3, 71%, 56%)
+
+.buttonMainLight
+ @include buttonMain(hsl(200, 60%, 99%),hsl(227, 75%, 14%))
+ border: 1px solid hsl(217, 61%, 90%)
+ &:hover
+  color: hsl(200, 60%, 99%)
