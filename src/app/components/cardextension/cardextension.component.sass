@@ -1,9 +1,11 @@
+@mixin backCard($background ,$border)
+   background: $background
+   border: $border
+   border-radius: 20px
+   padding: 1rem
+   width: auto
 .cardExtContDark
- border: 1px solid hsl(226, 11%, 37%)
- background: hsl(226, 25%, 17%)
- border-radius: 20px
- padding: 1rem
- width: auto
+ @include backCard(hsl(226, 25%, 17%),1px solid hsl(226, 11%, 37%))
  div:nth-child(1)
   display: flex
   flex-direction: row
@@ -11,11 +13,15 @@
   margin-left: 1rem
   h3
    color: white
-   font-weight: bold
+ 
+  font-weight: bold
    margin: 0
   p
    color: hsl(0, 0%, 78%)
    margin: 0.5rem 0 0 0
+
+.cardExtContLight
+ @include backCard(hsl(200, 60%, 99%),1px solid hsl(217, 61%, 90%))
 
 .cardExtbuttons
  display: flex

@@ -1,5 +1,5 @@
 <div class="allCardCont">
-  <div class="cardExtContDark" *ngFor="let ext of extensions()">
+  <div [ngClass]="mainMode ? 'cardExtContDark' : 'cardExtContLight'" *ngFor="let ext of extensions()">
     <div>
       <div>
         <picture><img src="{{ ext.img }}" alt="devlens" /></picture>
