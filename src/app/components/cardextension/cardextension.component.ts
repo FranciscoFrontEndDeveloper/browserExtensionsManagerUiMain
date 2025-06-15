@@ -30,11 +30,11 @@ export class CardextensionComponent implements OnDestroy{
   }
   filterState(tipo: string) {
     if (tipo === 'All') {
-      this.extensionesFiltradas = EXTENSIONES;
+      this.extensionesFiltradas = [...EXTENSIONES];
     } else if (tipo === 'Active') {
       this.extensionesFiltradas = this.extensiones.filter((e) => e.active);
     } else if (tipo === 'Inactive'){
-      this.extensionesFiltradas = this.extensionesFiltradas.filter(
+      this.extensionesFiltradas = this.extensiones.filter(
         (e) => !e.active
       );
     }

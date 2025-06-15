@@ -27,10 +27,11 @@
 @mixin bottomMode($background)
   background: $background
   padding: 0.5rem
+  margin: 0.5rem
   border-radius: 7px
 .superMainDark
   @include darkMode(linear-gradient(180deg, #040918 0%, #091540 100%))
-  padding: 1rem 
+  padding: 1rem
 
 .superMainlight
   @include lightMode(linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%))
@@ -44,6 +45,7 @@
   display: grid
   grid-template-columns: auto
   grid-template-rows: repeat(3,auto)
+  justify-content: center
 
 .extenheadContDark
   @include extenHead(hsl(226, 25%, 17%))
@@ -72,10 +74,14 @@
 .buttonExtenDark
   input
     @include bottomMode(hsl(225, 23%, 24%))
+    &:hover
+      background: hsl(226, 11%, 37%)
 
 .buttonExtenLigth
   input
     @include bottomMode(hsl(0, 0%, 93%))
+    &:hover
+      background: hsl(0, 0%, 78%)
 @media screen and ( min-width:  1280px)
   .buttonsCont
     flex-direction: row
@@ -85,4 +91,4 @@
       width: auto
       justify-content: space-between
   .superMainDark, .superMainlight
-    padding: 2rem 9rem;
+    padding: 2rem 9rem
