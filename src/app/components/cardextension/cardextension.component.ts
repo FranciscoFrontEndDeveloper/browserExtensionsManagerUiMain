@@ -15,5 +15,8 @@ export class CardextensionComponent {
   Remove: string = 'Remove';
   private extensionsService = inject(ExtensionsService);
   extensions = this.extensionsService.extensions;
-  @Input('mainMode') mainMode:boolean = true
+  @Input('mainMode') mainMode: boolean = true
+  
+  
+  
 }
