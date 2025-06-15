@@ -4,7 +4,7 @@
       <div>
         <picture><img src="{{ ext.img }}" alt="devlens" /></picture>
       </div>
-      <div class="cardExtContDark__text">
+      <div [ngClass]="mainMode ? 'cardExtContDark__text' : 'cardExtContLight__text'">
         <h3>{{ ext.title }}</h3>
         <p>{{ ext.text }}</p>
       </div>
