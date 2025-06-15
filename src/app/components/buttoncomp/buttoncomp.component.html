@@ -1,1 +1,1 @@
-<button class="buttonMainDark" [ngClass]="darkModeButton? 'buttonMainDark' : 'buttonMainLight'">{{textButton}}</button>
+<button (click)="filterExtends(textButton)" class="buttonMainDark" [ngClass]="darkModeButton? 'buttonMainDark' : 'buttonMainLight'">{{textButton}}</button>
