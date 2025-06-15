@@ -19,7 +19,6 @@
   flex-direction: row
   justify-content: space-between
   background: $background
-  padding: 1rem
   align-items: center
   border-radius: 10px
 
@@ -31,11 +30,11 @@
   border-radius: 7px
 .superMainDark
   @include darkMode(linear-gradient(180deg, #040918 0%, #091540 100%))
+  padding: 1rem 
 
 .superMainlight
   @include lightMode(linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%))
-  
-
+  padding: 1rem
 
 .mainContainer
   margin: 0
@@ -85,3 +84,5 @@
     &__buttonActs
       width: auto
       justify-content: space-between
+  .superMainDark, .superMainlight
+    padding: 2rem 9rem;
