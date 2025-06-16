@@ -38,15 +38,29 @@
  margin: 3rem 0 0 0
 
 .allCardCont
- display: flex
+ display: grid
+ grid-template-columns: auto
  flex-direction: column
  justify-content: center
  gap: 1rem 0
+ grid-template-columns: auto
 
 @media screen and ( min-width:  1280px)
+   .allCardCont
+      grid-template-columns: repeat(3,auto)
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      grid-template-columns: repeat(3,auto)
+      gap: 1rem
+   .cardExtContDark, .cardExtContLight
+      width: 21rem
+@media screen and ( min-width:  768px) and (max-width: 1024px)
    .allCardCont
       flex-direction: row
       flex-wrap: wrap
       justify-content: space-between
+      grid-template-columns: repeat(2,auto)
+      gap: 1rem 1rem
    .cardExtContDark, .cardExtContLight
-      width: 21rem
+      width: 19rem
