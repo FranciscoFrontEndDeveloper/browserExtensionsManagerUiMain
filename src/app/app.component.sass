@@ -23,7 +23,6 @@
   background: $background
   align-items: center
   border-radius: 10px
-  
 
 @mixin  titleExten($color)
   color: $color
@@ -57,6 +56,7 @@
 .extenheadContLight
   @include extenHead(hsl(200, 60%, 99%))
   border: 1px solid hsl(0, 0%, 78%)
+  box-shadow: 6px 6px 5px -3px hsl(0, 0%, 78%)
 .buttonsCont
   display: flex
   flex-direction: column
@@ -76,7 +76,11 @@
 .titleLight
   @include titleExten(hsl(227, 75%, 14%))
   text-align: center
-
+.iconExten
+  padding: 0.3rem
+  picture
+    img
+      width: 100%
 .buttonExtenDark
   input
     @include bottomMode(hsl(225, 23%, 24%))
