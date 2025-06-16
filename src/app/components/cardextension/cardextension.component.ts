@@ -14,7 +14,7 @@ import { EXTENSIONES } from '../../../mockExtensions';
   templateUrl: './cardextension.component.html',
   styleUrl: './cardextension.component.sass',
 })
-export class CardextensionComponent implements OnDestroy{
+export class CardextensionComponent implements OnDestroy {
   private extensionsService = inject(ExtensionsService);
   @Input('mainMode') mainMode: boolean = true;
   Remove: string = 'Remove';
@@ -33,14 +33,15 @@ export class CardextensionComponent implements OnDestroy{
       this.extensionesFiltradas = [...EXTENSIONES];
     } else if (tipo === 'Active') {
       this.extensionesFiltradas = this.extensiones.filter((e) => e.active);
-    } else if (tipo === 'Inactive'){
-      this.extensionesFiltradas = this.extensiones.filter(
-        (e) => !e.active
-      );
+    } else if (tipo === 'Inactive') {
+      this.extensionesFiltradas = this.extensiones.filter((e) => !e.active);
     }
   }
 
   ngOnDestroy(): void {
     this.sub.unsubscribe();
+  }
+  removeExten(index: number) {
+    this.extensionesFiltradas.splice(index,1);
   }
 }

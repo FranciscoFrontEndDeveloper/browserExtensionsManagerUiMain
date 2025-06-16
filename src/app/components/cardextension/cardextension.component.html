@@ -1,16 +1,27 @@
 <div class="allCardCont">
-  <div [ngClass]="mainMode ? 'cardExtContDark' : 'cardExtContLight'" *ngFor="let ext of extensionesFiltradas">
+  <div
+    [ngClass]="mainMode ? 'cardExtContDark' : 'cardExtContLight'"
+    *ngFor="let ext of extensionesFiltradas; let i = index"
+  >
     <div>
       <div>
         <picture><img src="{{ ext.img }}" alt="devlens" /></picture>
       </div>
-      <div [ngClass]="mainMode ? 'cardExtContDark__text' : 'cardExtContLight__text'">
+      <div
+        [ngClass]="
+          mainMode ? 'cardExtContDark__text' : 'cardExtContLight__text'
+        "
+      >
         <h3>{{ ext.title }}</h3>
         <p>{{ ext.text }}</p>
       </div>
     </div>
     <div class="cardExtbuttons">
-      <app-buttoncomp [darkModeButton]="mainMode"  [buttonReUse]="Remove"></app-buttoncomp>
+      <app-buttoncomp
+        (click)="removeExten(i)"
+        [darkModeButton]="mainMode"
+        [buttonReUse]="Remove"
+      ></app-buttoncomp>
       <app-buttontoggle [toggleCheck]="ext.active"></app-buttontoggle>
     </div>
   </div>
